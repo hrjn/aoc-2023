@@ -25,7 +25,7 @@ pub fn part1() -> io::Result<i32>{
         }
     };
     let res = v_out.iter().sum();
-    //println!("{}", res);
+    println!("{}", res);
     Ok(res)
 }
 
@@ -42,12 +42,12 @@ pub fn part2() -> io::Result<i32>{
         ("nine", "9")
     ];
     let mut v_out: Vec<i32> = Vec::new();
-     let file = File::open("input/day01.txt")?;
+    let file = File::open("input/day01.txt")?;
     let reader = io::BufReader::new(file);
     for line in reader.lines() {
         match line {
             Ok(line_str) => {
-                println!("{}", line_str);
+                //println!("{}", line_str);
                 let mut d: Vec<char> = Vec::new();
                 let mut cur_word = String::new();
                 for c in line_str.chars(){
@@ -56,7 +56,7 @@ pub fn part2() -> io::Result<i32>{
                     }
                     else {
                         cur_word.push(c);
-                        println!("curword = {}", cur_word);
+                        //println!("curword = {}", cur_word);
                         for (word, digit) in &lut{
                             if cur_word.contains(*word){
                                 d.push(digit.chars().next().unwrap());
@@ -68,7 +68,7 @@ pub fn part2() -> io::Result<i32>{
                     }
                 }
                 let l: String = vec![d[0], d[d.len()-1]].into_iter().collect();
-                println!("{:?}", l);
+                //println!("{:?}", l);
                 v_out.push(l.parse::<i32>().unwrap());
             }
             Err(e) => {
