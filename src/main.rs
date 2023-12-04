@@ -13,5 +13,6 @@ fn main() {
     println!("----------");
 
     let _d03p1 = day03::part1();
+    let _d03p2 = day03::part2();
 
 }
