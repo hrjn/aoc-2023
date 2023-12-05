@@ -21,5 +21,6 @@ fn main() {
     //let _d03p2 = day03::part2();
 
     let _d04p1 = day04::part1();
+    let _d04p2 = day04::part2();
 
 }
