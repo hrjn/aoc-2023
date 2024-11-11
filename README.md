@@ -1,2 +1,2 @@
 # aoc-2023
-Advent of Code solution proposals.
+Ah sh*t here we go agin (2023 edition)
